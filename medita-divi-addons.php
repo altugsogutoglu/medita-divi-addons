@@ -65,8 +65,7 @@ function medita_addons_enqueue_vb_scripts() {
 		);
 	}
 }
-add_action( 'divi_visual_builder_assets_before_enqueue_scripts', 'medita_divi_addons_enqueue_vb_scripts' );
-
+add_action('divi_visual_builder_assets_before_enqueue_scripts', 'medita_addons_enqueue_vb_scripts');
 /**
  * Enqueue style and scripts of Module Extension Example
  *
