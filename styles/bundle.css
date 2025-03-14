@@ -1,0 +1,140 @@
+/*!******************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/components/child-module/module.scss ***!
+  \******************************************************************************************************************************************************************************************/
+.example_child_module {
+  display: flex;
+  flex-wrap: wrap;
+}
+.example_child_module__icon.et-pb-icon {
+  font-size: 21px;
+  padding-top: 6px;
+  color: #29c4a9;
+}
+.example_child_module__content-container {
+  flex-grow: 1;
+  flex-basis: 0%;
+  padding-left: 15px;
+}
+.example_child_module__title {
+  font-size: 21px;
+  line-height: 1em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.example_child_module__content {
+  font-size: 13px;
+  line-height: 1.6em;
+  color: #868686;
+}
+/*!********************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/components/dynamic-module/module.scss ***!
+  \********************************************************************************************************************************************************************************************/
+.example_dynamic_module {
+  padding: 50px;
+  background-color: #f5f5f5;
+}
+.example_dynamic_module__inner {
+  position: relative;
+}
+.example_dynamic_module__title {
+  margin-bottom: 30px;
+}
+.example_dynamic_module__post-item {
+  margin-bottom: 20px;
+}
+.example_dynamic_module__post-item-title {
+  font-size: 18px;
+}
+/*!*******************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/components/parent-module/module.scss ***!
+  \*******************************************************************************************************************************************************************************************/
+.entry-content ul.example_parent_module {
+  list-style: none;
+}
+/*!*******************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/components/static-module/module.scss ***!
+  \*******************************************************************************************************************************************************************************************/
+.example_static_module {
+  padding: 30px;
+  background-color: #ecf4f7;
+}
+.example_static_module__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+}
+.example_static_module__image {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding-right: 20px;
+}
+.example_static_module__content-container {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding-left: 20px;
+}
+/*!*****************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/components/card-module/module.scss ***!
+  \*****************************************************************************************************************************************************************************************/
+.example_card_module {
+  padding: 0;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+.example_card_module__link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+.example_card_module__link:hover .example_card_module {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.example_card_module__inner {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.example_card_module__image {
+  flex: 0 0 auto;
+  width: 100%;
+}
+.example_card_module__image img {
+  width: 100%;
+  object-fit: cover;
+  height: 200px;
+}
+.example_card_module__content-container {
+  flex: 1 0 auto;
+  padding: 20px;
+}
+.example_card_module__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.example_card_module__content {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.example_card_module__link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.example_card_module__link:hover .example_card_module {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
