@@ -32,32 +32,7 @@ export const CardModuleEdit = (props: CardModuleEditProps): ReactElement => {
   // Get image attributes
   const imageSrc = attrs?.image?.innerContent?.desktop?.value?.src ?? '';
   const imageAlt = attrs?.image?.innerContent?.desktop?.value?.alt ?? '';
-
-  // Get link URL
-  const linkUrl = attrs?.link?.innerContent?.desktop?.value ?? '';
-
-  const cardContent = (
-    <div className="example_card_module__inner">
-      <div className="example_card_module__image">
-        <img src={imageSrc} alt={imageAlt} />
-      </div>
-      <div className="example_card_module__content-container">
-        {elements.render({
-          attrName: 'title',
-        })}
-        <div className="example_card_module__content">
-          {elements.render({
-            attrName: 'content',
-          })}
-        </div>
-        <div className="example_card_module__link-container">
-          <a href={linkUrl} className="example_card_module__link">
-            Learn More
-          </a>
-        </div>
-      </div>
-    </div>
-  );
+  const linkUrl = attrs?.module?.advanced?.link?.desktop?.value?.url ?? '';
 
   return (
     <ModuleContainer
@@ -72,11 +47,26 @@ export const CardModuleEdit = (props: CardModuleEditProps): ReactElement => {
       {elements.styleComponents({
         attrName: 'module',
       })}
-      {linkUrl ? (
-        <a href={linkUrl} className="example_card_module__link">
-          {cardContent}
-        </a>
-      ) : cardContent}
+      <div className="example_card_module__inner">
+        <div className="example_card_module__image">
+          <img src={imageSrc} alt={imageAlt} />
+        </div>
+        <div className="example_card_module__content-container">
+          {elements.render({
+            attrName: 'title',
+          })}
+          <div className="example_card_module__content">
+            {elements.render({
+              attrName: 'content',
+            })}
+          </div>
+          <div className="example_card_module__link">
+            <a href={linkUrl} target="_blank" rel="noopener noreferrer">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </div>
     </ModuleContainer>
   );
 };

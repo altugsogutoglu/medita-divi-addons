@@ -29,7 +29,7 @@ export interface CardModuleAttrs extends InternalAttrs {
     module?: {
         meta?: Element.Meta.Attributes;
         advanced?: {
-            // link?: Element.Advanced.Link.Attributes;
+            link?: Element.Advanced.Link.Attributes;
             htmlAttributes?: Element.Advanced.IdClasses.Attributes;
             text?: Element.Advanced.Text.Attributes;
         };
@@ -68,10 +68,6 @@ export interface CardModuleAttrs extends InternalAttrs {
 
     // Content
     content?: Element.Types.Content.Attributes;
-
-    link?: {
-        innerContent?: Element.InnerContent.Attributes;
-    };
 }
 
 export type CardModuleEditProps = ModuleEditProps<CardModuleAttrs>;

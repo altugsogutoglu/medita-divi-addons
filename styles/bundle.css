@@ -77,64 +77,116 @@
 /*!*****************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/components/card-module/module.scss ***!
   \*****************************************************************************************************************************************************************************************/
-.example_card_module {
-  padding: 0;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
-}
-.example_card_module__link {
+/* Card wrapper - clickable area */
+.example_card_module__wrapper {
   display: block;
-  color: inherit;
-  text-decoration: none;
-}
-.example_card_module__link:hover .example_card_module {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-.example_card_module__inner {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-.example_card_module__image {
-  flex: 0 0 auto;
-  width: 100%;
-}
-.example_card_module__image img {
-  width: 100%;
-  object-fit: cover;
-  height: 200px;
-}
-.example_card_module__content-container {
-  flex: 1 0 auto;
-  padding: 20px;
-}
-.example_card_module__title {
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 20px;
-  font-weight: 600;
-}
-.example_card_module__content {
-  font-size: 14px;
-  line-height: 1.5;
-}
-.example_card_module__link {
-  display: block;
+  height: 100%;
   text-decoration: none;
   color: inherit;
-}
-.example_card_module__link:hover .example_card_module {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
 }
 
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 30px;
-  margin-top: 30px;
+.example_card_module__wrapper:hover {
+  transform: translateX(4px);
+}
+
+/* Card inner container */
+.example_card_module__inner {
+  background-color: white;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(0);
+  transition: transform 0.3s;
+}
+
+.example_card_module__wrapper:hover .example_card_module__inner {
+  transform: translateY(-4px);
+}
+
+/* Image container */
+.example_card_module__image {
+  position: relative;
+  padding-bottom: 75%; /* 4:3 aspect ratio */
+  overflow: hidden;
+}
+
+/* Image element */
+.example_card_module__image-element {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+
+.example_card_module__wrapper:hover .example_card_module__image-element {
+  transform: scale(1.05);
+}
+
+/* Gradient overlay */
+.example_card_module__gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), transparent);
+  opacity: 0.9;
+}
+
+/* Title container */
+.example_card_module__title-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+}
+
+/* Title styling */
+.example_card_module__title {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* Content container */
+.example_card_module__content-container {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Content styling */
+.example_card_module__content {
+  color: #4b5563;
+  line-height: 1.5;
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+/* Link text */
+.example_card_module__link-text {
+  margin-top: 1rem;
+  color: #2563eb; /* Or use your primary color */
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.example_card_module__wrapper:hover .example_card_module__link-text {
+  transform: translateX(8px);
+  color: #1d4ed8; /* Slightly darker on hover */
+}
+
+/* Arrow icon */
+.example_card_module__arrow-icon {
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.5rem;
 }
