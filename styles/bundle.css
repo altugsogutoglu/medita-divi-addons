@@ -45,6 +45,25 @@
 .example_dynamic_module__post-item-title {
   font-size: 18px;
 }
+/*!***********************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/components/navigation-module/module.scss ***!
+  \***********************************************************************************************************************************************************************************************/
+.example_navigation_module {
+  padding: 50px;
+  background-color: #f5f5f5;
+}
+.example_navigation_module__inner {
+  position: relative;
+}
+.example_navigation_module__title {
+  margin-bottom: 30px;
+}
+.example_navigation_module__post-item {
+  margin-bottom: 20px;
+}
+.example_navigation_module__post-item-title {
+  font-size: 18px;
+}
 /*!*******************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/components/parent-module/module.scss ***!
   \*******************************************************************************************************************************************************************************************/

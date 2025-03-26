@@ -16,7 +16,7 @@ use MEE\Modules\D4Module\D4Module;
 use MEE\Modules\ChildModule\ChildModule;
 use MEE\Modules\ParentModule\ParentModule;
 use MEE\Modules\DynamicModule\DynamicModule;
-use MEE\Modules\CardModule\CardModule; // Add this line for your new module
+use MEE\Modules\CardModule\CardModule; 
 
 add_action(
     'divi_module_library_modules_dependency_tree',
