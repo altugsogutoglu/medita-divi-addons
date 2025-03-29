@@ -999,6 +999,535 @@ export type YourNamespaceEditPostStoreState = EditPost.Store.ImmutableState<Your
 }
 ```
 
+## Complete Divi Field Types Reference
+
+Divi Builder 5 offers a comprehensive set of field types to create rich and flexible module interfaces. Here's a complete reference of available field types:
+
+### Basic Field Types
+
+#### 1. Text Field (`divi/text`)
+Simple text input for short text content.
+
+```json
+{
+  "name": "divi/text",
+  "type": "field",
+  "props": {
+    "defaultValue": "Default text"
+  }
+}
+```
+
+#### 2. Textarea Field (`divi/textarea`)
+Multi-line text input for longer content.
+
+```json
+{
+  "name": "divi/textarea",
+  "type": "field",
+  "props": {
+    "defaultValue": "Default text for longer content",
+    "rows": 4
+  }
+}
+```
+
+#### 3. Rich Text Editor (`divi/richtext`)
+WYSIWYG editor for formatted content with HTML support.
+
+```json
+{
+  "name": "divi/richtext",
+  "type": "field",
+  "props": {
+    "defaultValue": "<p>Formatted content with <strong>HTML</strong> support</p>"
+  }
+}
+```
+
+#### 4. Number Field (`divi/range`)
+Numeric input with optional slider.
+
+```json
+{
+  "name": "divi/range",
+  "type": "field",
+  "props": {
+    "defaultValue": 50,
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px"
+  }
+}
+```
+
+### Selection Fields
+
+#### 5. Select Dropdown (`divi/select`)
+Dropdown menu for selecting from predefined options.
+
+```json
+{
+  "name": "divi/select",
+  "type": "field",
+  "props": {
+    "defaultValue": "option1",
+    "options": [
+      { "value": "option1", "label": "Option 1" },
+      { "value": "option2", "label": "Option 2" },
+      { "value": "option3", "label": "Option 3" }
+    ]
+  }
+}
+```
+
+#### 6. Toggle Switch (`divi/toggle`)
+On/off switch for boolean settings.
+
+```json
+{
+  "name": "divi/toggle",
+  "type": "field",
+  "props": {
+    "defaultValue": true
+  }
+}
+```
+
+#### 7. Checkboxes (`divi/checkboxes`)
+Multiple selection checkboxes.
+
+```json
+{
+  "name": "divi/checkboxes",
+  "type": "field",
+  "props": {
+    "defaultValue": ["option1", "option3"],
+    "options": [
+      { "value": "option1", "label": "Option 1" },
+      { "value": "option2", "label": "Option 2" },
+      { "value": "option3", "label": "Option 3" }
+    ]
+  }
+}
+```
+
+#### 8. Button Options (`divi/button-options`)
+Specialized buttons for option selection (often used for alignment).
+
+```json
+{
+  "name": "divi/button-options",
+  "type": "field",
+  "props": {
+    "options": {
+      "left": {
+        "icon": "divi/align-left"
+      },
+      "center": {
+        "icon": "divi/align-center"
+      },
+      "right": {
+        "icon": "divi/align-right"
+      }
+    },
+    "defaultValue": "left",
+    "showLabel": false
+  }
+}
+```
+
+### Media Fields
+
+#### 9. Upload Field (`divi/upload`)
+File/image upload selector.
+
+```json
+{
+  "name": "divi/upload",
+  "type": "field",
+  "props": {
+    "defaultValue": "",
+    "buttonLabel": "Upload Image",
+    "allowedTypes": ["image"]
+  }
+}
+```
+
+#### 10. Icon Picker (`divi/icon`)
+Icon selection interface.
+
+```json
+{
+  "name": "divi/icon",
+  "type": "field",
+  "props": {
+    "defaultValue": "%%53%%",
+    "showSearch": true
+  }
+}
+```
+
+#### 11. Enhanced Icon Picker (`divi/icon-picker`)
+Advanced icon selection with categorized icons.
+
+```json
+{
+  "name": "divi/icon-picker",
+  "type": "field",
+  "props": {
+    "defaultValue": "divi/arrows/arrow-down",
+    "showRecentIcons": true
+  }
+}
+```
+
+### Style Fields
+
+#### 12. Color Picker (`divi/color-picker`)
+Color selection interface with opacity support.
+
+```json
+{
+  "name": "divi/color-picker",
+  "type": "field",
+  "props": {
+    "defaultValue": "#0066cc",
+    "showOpacity": true
+  }
+}
+```
+
+#### 13. Font Controls (`divi/font`)
+Font style selection (family, size, weight, etc).
+
+```json
+{
+  "name": "divi/font",
+  "type": "field",
+  "props": {
+    "groupLabel": "Typography",
+    "fields": {
+      "fontSize": {
+        "label": "Size"
+      },
+      "lineHeight": {
+        "label": "Line Height"
+      },
+      "fontWeight": {
+        "label": "Weight"
+      }
+    }
+  }
+}
+```
+
+#### 14. Body Font Controls (`divi/font-body`)
+Specialized font controls for body text.
+
+```json
+{
+  "name": "divi/font-body",
+  "type": "field",
+  "props": {
+    "groupLabel": "Body Typography"
+  }
+}
+```
+
+#### 15. Border Control (`divi/border`)
+Border style, width, and color controls.
+
+```json
+{
+  "name": "divi/border",
+  "type": "field",
+  "props": {
+    "grouped": true
+  }
+}
+```
+
+#### 16. Box Shadow (`divi/box-shadow`)
+Shadow effects configuration.
+
+```json
+{
+  "name": "divi/box-shadow",
+  "type": "field",
+  "props": {
+    "grouped": true
+  }
+}
+```
+
+#### 17. Filters (`divi/filters`)
+Visual filters like blur, brightness, contrast, etc.
+
+```json
+{
+  "name": "divi/filters",
+  "type": "field",
+  "props": {
+    "grouped": true
+  }
+}
+```
+
+#### 18. Sizing (`divi/sizing`)
+Width and height controls.
+
+```json
+{
+  "name": "divi/sizing",
+  "type": "field",
+  "props": {
+    "grouped": true
+  }
+}
+```
+
+#### 19. Spacing (`divi/spacing`)
+Margin and padding controls.
+
+```json
+{
+  "name": "divi/spacing",
+  "type": "field",
+  "props": {
+    "grouped": true
+  }
+}
+```
+
+### Advanced Fields
+
+#### 20. Animation Controls (`divi/animation`)
+Animation type, duration, and delay settings.
+
+```json
+{
+  "name": "divi/animation",
+  "type": "field",
+  "props": {
+    "allowDisable": true
+  }
+}
+```
+
+#### 21. Composite Group (`divi/composite`)
+Container for grouping related fields.
+
+```json
+{
+  "name": "divi/composite",
+  "props": {
+    "groupLabel": "Group Title"
+  }
+}
+```
+
+#### 22. Sticky Controls (`divi/sticky`)
+Settings for sticky positioning behavior.
+
+```json
+{
+  "name": "divi/sticky",
+  "type": "field",
+  "props": {
+    "defaultValue": false
+  }
+}
+```
+
+### Field Patterns and Usage
+
+#### Responsive Field Setup
+
+To make a field responsive (support desktop/tablet/mobile):
+
+```json
+"responsiveField": {
+  "type": "object",
+  "default": {
+    "value": {
+      "desktop": {
+        "value": "Desktop value"
+      },
+      "tablet": {
+        "value": "Tablet value"
+      },
+      "phone": {
+        "value": "Phone value"
+      }
+    }
+  },
+  "settings": {
+    "innerContent": {
+      "groupType": "group-items",
+      "items": {
+        "value": {
+          "features": {
+            "responsive": true
+          },
+          "component": {
+            "name": "divi/text",
+            "type": "field"
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+#### Hover-Enabled Field
+
+To enable hover state for a field:
+
+```json
+"hoverField": {
+  "type": "object",
+  "default": {
+    "value": {
+      "desktop": {
+        "value": "Normal state",
+        "hover": "Hover state"
+      }
+    }
+  },
+  "settings": {
+    "innerContent": {
+      "groupType": "group-items",
+      "items": {
+        "value": {
+          "features": {
+            "hover": true
+          },
+          "component": {
+            "name": "divi/text",
+            "type": "field"
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+#### Conditionally Displayed Field
+
+To show a field only when another field has a specific value:
+
+```json
+"conditionalField": {
+  "type": "object",
+  "default": {
+    "value": {
+      "desktop": {
+        "value": "Conditional value"
+      }
+    }
+  },
+  "settings": {
+    "innerContent": {
+      "groupType": "group-items",
+      "items": {
+        "value": {
+          "conditions": [
+            {
+              "dependsOn": "otherField.value",
+              "value": "option1",
+              "operator": "===",
+              "relation": "and"
+            }
+          ],
+          "component": {
+            "name": "divi/text",
+            "type": "field"
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+#### Field with Dynamic Content Support
+
+To enable dynamic content for a field:
+
+```json
+"dynamicField": {
+  "type": "object",
+  "default": {
+    "value": {
+      "desktop": {
+        "value": "Static content"
+      }
+    }
+  },
+  "settings": {
+    "innerContent": {
+      "groupType": "group-items",
+      "items": {
+        "value": {
+          "features": {
+            "dynamicContent": {
+              "type": "text"
+            }
+          },
+          "component": {
+            "name": "divi/text",
+            "type": "field"
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+#### Field Validation
+
+Adding validation to a text field:
+
+```json
+"validatedField": {
+  "type": "object",
+  "default": {
+    "value": {
+      "desktop": {
+        "value": ""
+      }
+    }
+  },
+  "settings": {
+    "innerContent": {
+      "groupType": "group-items",
+      "items": {
+        "value": {
+          "component": {
+            "name": "divi/text",
+            "type": "field",
+            "props": {
+              "validation": {
+                "type": "email",
+                "required": true,
+                "message": "Please enter a valid email address"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+These field types can be combined and customized to create rich module interfaces that match Divi's native modules in both functionality and appearance.
+
 ## Best Practices
 
 ### 1. Namespace Consistency
@@ -1753,4 +2282,388 @@ Remember to:
 - Test thoroughly before deployment
 - Document your code and module usage
 
-With these principles in mind, you can create professional-quality Divi extensions that enhance the capabilities of the Divi Builder and provide value to your users.
+With these principles in mind, you can create professional-quality Divi extensions that enhance the capabilities of the Divi Builder.
+
+## Appendix: Module.json Structure Reference
+
+The `module.json` file is the heart of your Divi module definition. Here's a comprehensive breakdown of its structure:
+
+### Root Properties
+
+```json
+{
+  "name": "namespace/module-name",         // Required: Unique identifier
+  "d4Shortcode": "",                        // Optional: Legacy Divi 4 shortcode (if any)
+  "title": "Module Title",                  // Required: User-facing module name
+  "titles": "Module Titles",                // Required: Plural form
+  "moduleIcon": "namespace/module-icon",    // Required: SVG icon reference
+  "moduleClassName": "module_classname",    // Required: Main CSS class
+  "moduleOrderClassName": "module_classname", // Required: Order CSS class
+  "category": "module",                     // Required: "module" or "child-module"
+  "childModuleName": "namespace/child-name", // Optional: For parent modules
+  "allowedParentModules": ["namespace/parent-module"], // Optional: For child modules
+  "attributes": { /* ... */ },              // Required: Module attributes
+  "customCssFields": { /* ... */ },         // Optional: Custom CSS selectors
+  "settings": { /* ... */ }                 // Required: Module settings
+}
+```
+
+### Attributes Section
+
+The `attributes` section contains all the fields and configuration for your module:
+
+```json
+"attributes": {
+  "module": {
+    "type": "object",
+    "selector": "{{selector}}",
+    "default": { /* Default values */ },
+    "settings": {
+      "meta": { /* Admin label, etc. */ },
+      "advanced": { /* Link, text, HTML attributes */ },
+      "decoration": { /* Design settings */ }
+    }
+  },
+  "yourField": {
+    "type": "object",
+    "selector": "{{selector}} .your_selector",
+    "default": { /* Default values */ },
+    "settings": {
+      "innerContent": {
+        "groupType": "group-items",
+        "items": {
+          "value": {
+            "groupSlug": "contentGroup",
+            "priority": 10,
+            "render": true,
+            "attrName": "yourField.value",
+            "label": "Field Label",
+            "description": "Field description",
+            "features": {
+              "responsive": true,
+              "hover": false,
+              "sticky": false,
+              "dynamicContent": {
+                "type": "text"
+              }
+            },
+            "component": {
+              "name": "divi/text",
+              "type": "field",
+              "props": {
+                "defaultValue": "Default"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+### Custom CSS Fields
+
+The `customCssFields` section defines selectors for custom CSS:
+
+```json
+"customCssFields": {
+  "container": {
+    "subName": "container",
+    "selectorSuffix": " .module__container",
+    "label": "Container"
+  },
+  "title": {
+    "subName": "title",
+    "selectorSuffix": " .module__title",
+    "label": "Title"
+  }
+}
+```
+
+### Settings Section
+
+The `settings` section configures the module's UI in the Visual Builder:
+
+```json
+"settings": {
+  "content": "auto",
+  "design": "auto",
+  "advanced": "auto",
+  "groups": {
+    "contentGroup": {
+      "panel": "content",
+      "priority": 10,
+      "groupName": "contentGroup",
+      "multiElements": true,
+      "component": {
+        "name": "divi/composite",
+        "props": {
+          "groupLabel": "Content Settings"
+        }
+      }
+    },
+    "designGroup": {
+      "panel": "design",
+      "priority": 10,
+      "groupName": "designGroup",
+      "multiElements": true,
+      "component": {
+        "name": "divi/composite",
+        "props": {
+          "groupLabel": "Design Settings"
+        }
+      }
+    }
+  }
+}
+```
+
+## TypeScript Integration Best Practices
+
+### Type Definition Strategy
+
+For optimal TypeScript integration with Divi modules, follow these principles:
+
+1. **Match JSON Structure**: Ensure TypeScript interfaces exactly match your module.json structure
+2. **Use Nested Types**: Define nested interfaces that reflect Divi's hierarchical structure
+3. **Leverage Utility Types**: Use Divi's utility types to reduce repetition
+
+### Example of Comprehensive Type Definitions
+
+```typescript
+// Base responsive value type
+export interface ResponsiveValue<T> {
+  desktop?: {
+    value: T;
+    hover?: T;
+  };
+  tablet?: {
+    value: T;
+    hover?: T;
+  };
+  phone?: {
+    value: T;
+    hover?: T;
+  };
+}
+
+// Common attribute types
+export interface StringValue extends ResponsiveValue<string> {}
+export interface NumberValue extends ResponsiveValue<number> {}
+export interface BooleanValue extends ResponsiveValue<boolean> {}
+
+// Module-specific attribute types
+export interface YourModuleAttrs extends InternalAttrs {
+  css?: YourModuleCssGroupAttr;
+  
+  module?: {
+    meta?: Element.Meta.Attributes;
+    advanced?: {
+      link?: Element.Advanced.Link.Attributes;
+      htmlAttributes?: Element.Advanced.IdClasses.Attributes;
+      text?: Element.Advanced.Text.Attributes;
+    };
+    decoration?: Element.Decoration.PickedAttributes<
+      'animation' |
+      'background' |
+      'border' |
+      'boxShadow' |
+      'disabledOn' |
+      'filters' |
+      'overflow' |
+      'position' |
+      'scroll' |
+      'sizing' |
+      'spacing' |
+      'sticky' |
+      'transform' |
+      'transition' |
+      'zIndex'
+    >;
+  };
+  
+  // Custom field definitions
+  title?: {
+    text?: StringValue;
+    tag?: StringValue; 
+  };
+  
+  content?: {
+    text?: StringValue;
+    showButton?: BooleanValue;
+    buttonText?: StringValue;
+    buttonUrl?: StringValue;
+  };
+}
+```
+
+### Type Checking Helpers
+
+Create utility functions to help with type checking and accessing values:
+
+```typescript
+// Helper to get value safely from responsive structure
+export function getValue<T>(
+  attr?: ResponsiveValue<T>,
+  device: 'desktop' | 'tablet' | 'phone' = 'desktop',
+  state: 'value' | 'hover' = 'value',
+  defaultValue?: T
+): T | undefined {
+  return attr?.[device]?.[state] ?? defaultValue;
+}
+
+// Usage
+const titleText = getValue(attrs?.title?.text, 'desktop', 'value', 'Default Title');
+```
+
+## Extended Troubleshooting Guide
+
+### Module Not Appearing in Visual Builder
+
+If your module doesn't appear in the Visual Builder:
+
+1. **Check Module Registration**:
+   - Verify the `module.json` is in the correct location
+   - Check the PHP registration code is executing
+   - Look for JavaScript errors in the console
+
+2. **Check Icon Registration**:
+   - Ensure the icon is registered correctly
+   - Verify icon name matches the `moduleIcon` property
+
+3. **Namespacing Issues**:
+   - Make sure namespace is consistent across all files
+   - Check for namespace collisions with other plugins
+
+### TypeScript Errors
+
+Common TypeScript errors and solutions:
+
+1. **Type Mismatch**:
+   ```
+   Type 'X' is not assignable to type 'Y'
+   ```
+   - Ensure your types match the actual structure in module.json
+   - Pay special attention to nested objects and responsive values
+
+2. **Module Not Found**:
+   ```
+   Cannot find module '@divi/xyz' or its corresponding type declarations
+   ```
+   - Check the package dependencies in package.json
+   - Verify the tsconfig.json paths
+
+3. **Property Does Not Exist**:
+   ```
+   Property 'xyz' does not exist on type 'SomeType'
+   ```
+   - Update your interface definitions to include missing properties
+   - Check for typos in property names
+
+### PHP Runtime Errors
+
+1. **Class Not Found**:
+   ```
+   Fatal error: Class 'XYZ' not found
+   ```
+   - Verify autoloader configuration
+   - Check namespace and file location match
+
+2. **Method Not Found**:
+   ```
+   Call to undefined method XYZ::method()
+   ```
+   - Ensure traits are properly used
+   - Check method visibility (public/private)
+
+### Frontend Rendering Issues
+
+1. **Empty or Incomplete Rendering**:
+   - Check `render_callback` method for errors
+   - Verify attribute structure in PHP matches JSON definition
+   - Check for proper HTML escaping or missing tags
+
+2. **CSS Not Applied**:
+   - Verify the selectors in `ModuleStylesTrait`
+   - Check for CSS specificity issues
+   - Inspect the generated CSS in browser tools
+
+3. **JavaScript Interactivity Not Working**:
+   - Check if scripts are properly enqueued
+   - Verify event listeners are attached correctly
+   - Check browser console for JavaScript errors
+
+## Continuous Integration and Deployment
+
+### Setting Up GitHub Actions
+
+Create a `.github/workflows/build.yml` file for CI/CD:
+
+```yaml
+name: Build and Test
+
+on:
+  push:
+    branches: [ main, development ]
+  pull_request:
+    branches: [ main, development ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Use Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: TypeScript check
+      run: npm run typecheck
+      
+    - name: Run tests
+      run: npm test
+      
+    - name: Build
+      run: npm run build
+```
+
+### Release Management
+
+1. **Version Control**:
+   - Use semantic versioning (MAJOR.MINOR.PATCH)
+   - Update version in main plugin file, package.json, and README.md
+
+2. **Change Log**:
+   - Maintain a CHANGELOG.md file
+   - Document all changes, additions, and fixes
+
+3. **Release Checklist**:
+   - Run all tests
+   - Build production assets
+   - Test in multiple environments
+   - Generate documentation
+   - Create release tag
+
+### Deployment Strategy
+
+1. **WordPress.org Submission**:
+   - Follow WordPress.org plugin guidelines
+   - Prepare SVN repository structure
+   - Submit for review
+
+2. **Private Distribution**:
+   - Create installable zip package
+   - Set up license management if needed
+   - Provide installation instructions
+
+3. **Automatic Updates**:
+   - Implement custom update server
+   - Add update checks in your plugin
+   - Provide seamless updates for customers

@@ -16,7 +16,8 @@ use MEE\Modules\D4Module\D4Module;
 use MEE\Modules\ChildModule\ChildModule;
 use MEE\Modules\ParentModule\ParentModule;
 use MEE\Modules\DynamicModule\DynamicModule;
-use MEE\Modules\CardModule\CardModule; 
+use MEE\Modules\CardModule\CardModule;
+use MEE\Modules\CartModule\CartModule;
 
 add_action(
     'divi_module_library_modules_dependency_tree',
@@ -26,6 +27,7 @@ add_action(
         $dependency_tree->add_dependency( new StaticModule() );
         $dependency_tree->add_dependency( new D4Module() );
         $dependency_tree->add_dependency( new DynamicModule() );
-        $dependency_tree->add_dependency( new CardModule() ); // Add this line to register your module
+        $dependency_tree->add_dependency( new CardModule() );
+        $dependency_tree->add_dependency( new CartModule() );
     }
 );

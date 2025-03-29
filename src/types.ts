@@ -10,7 +10,9 @@ export type ModuleFlatObjectItems = (
   ModuleFlatObjectNamed<'example/dynamic-module'> |
   ModuleFlatObjectNamed<'example/parent-module'> |
   ModuleFlatObjectNamed<'example/static-module'> |
-  ModuleFlatObjectNamed<'example/card-module'> // Add this line
+  ModuleFlatObjectNamed<'example/card-module'> |
+  ModuleFlatObjectNamed<'example/cart-module'> |
+  ModuleFlatObjectNamed<'medita/header-module'>
 );
 
 export type ExampleModuleFlatObjects = ModuleFlatObjects<ModuleFlatObjectItems>;

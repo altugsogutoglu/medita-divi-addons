@@ -1,0 +1,35 @@
+.medita_cart_module {
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		position: relative;
+		text-decoration: none;
+		color: inherit;
+	}
+
+	&__icon {
+		width: 24px;
+		height: 24px;
+	}
+
+	&__count {
+		position: absolute;
+		top: -8px;
+		right: -8px;
+		background: #ff0000;
+		color: #ffffff;
+		border-radius: 50%;
+		width: 20px;
+		height: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 12px;
+	}
+} 

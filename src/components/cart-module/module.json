@@ -1,0 +1,151 @@
+{
+	"name": "example/cart-module",
+	"d4Shortcode": "",
+	"title": "Cart Module",
+	"titles": "Cart Modules",
+	"moduleIcon": "example/module-cart",
+	"moduleClassName": "medita_cart_module",
+	"moduleOrderClassName": "medita_cart_module",
+	"category": "module",
+	"icon": "cart",
+	"customCssFields": {
+		"link": {
+			"subName": "link",
+			"selector": "{{selector}} .medita_cart_module__link",
+			"selectorSuffix": "",
+			"label": "Cart Link"
+		},
+		"icon": {
+			"subName": "icon",
+			"selector": "{{selector}} .medita_cart_module__icon",
+			"selectorSuffix": "",
+			"label": "Cart Icon"
+		},
+		"count": {
+			"subName": "count",
+			"selector": "{{selector}} .medita_cart_module__count",
+			"selectorSuffix": "",
+			"label": "Cart Count"
+		}
+	},
+	"attributes": {
+		"module": {
+			"type": "object",
+			"selector": "{{selector}}",
+			"default": {
+				"meta": {
+					"adminLabel": {
+						"desktop": {
+							"value": "Cart Module"
+						}
+					}
+				},
+				"advanced": {
+					"text": {
+						"text": {
+							"desktop": {
+								"value": {
+									"color": "light"
+								}
+							}
+						}
+					}
+				},
+				"decoration": {
+					"spacing": {
+						"desktop": {
+							"value": {
+								"margin": {
+									"top": "0px",
+									"right": "auto",
+									"bottom": "30px",
+									"left": "auto"
+								}
+							}
+						}
+					}
+				}
+			},
+			"defaultPrintedStyle": {
+				"decoration": {
+					"background": {
+						"desktop": {
+							"value": {
+								"color": "#ffffff"
+							}
+						}
+					}
+				}
+			},
+			"styleProps": {
+				"border": {
+					"important": true
+				}
+			},
+			"settings": {
+				"meta": {
+					"adminLabel": {}
+				},
+				"advanced": {
+					"link": {},
+					"text": {},
+					"htmlAttributes": {}
+				},
+				"decoration": {
+					"background": {},
+					"sizing": {},
+					"spacing": {},
+					"border": {},
+					"boxShadow": {},
+					"filters": {},
+					"transform": {},
+					"animation": {},
+					"overflow": {},
+					"disabledOn": {},
+					"transition": {},
+					"position": {},
+					"zIndex": {},
+					"scroll": {},
+					"sticky": {}
+				}
+			},
+			"scriptData": {
+				"cartUrl": "/cart",
+				"cartCount": 0
+			}
+		}
+	},
+	"advanced": {
+		"module": {
+			"decoration": {
+				"background": {
+					"desktop": {
+						"value": {
+							"color": "#ffffff"
+						}
+					}
+				},
+				"border": {
+					"desktop": {
+						"value": {
+							"width": "0px",
+							"style": "solid",
+							"color": "#000000"
+						}
+					}
+				},
+				"boxShadow": {
+					"desktop": {
+						"value": {
+							"blur": "0px",
+							"color": "rgba(0, 0, 0, 0.1)",
+							"spread": "0px",
+							"horizontal": "0px",
+							"vertical": "0px"
+						}
+					}
+				}
+			}
+		}
+	}
+} 
